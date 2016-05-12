@@ -237,16 +237,16 @@ class MarkupGenerator {
         let content = encodeContent(text);
         // These are reverse alphabetical by tag name.
         if (style.has(BOLD)) {
-          content = `<strong>${content}</strong>`;
+          content = `<b>${content}</b>`;
         }
         if (style.has(UNDERLINE)) {
-          content = `<ins>${content}</ins>`;
+          content = `<u>${content}</u>`;
         }
         if (style.has(ITALIC)) {
-          content = `<em>${content}</em>`;
+          content = `<i>${content}</i>`;
         }
         if (style.has(STRIKETHROUGH)) {
-          content = `<del>${content}</del>`;
+          content = `<strike>${content}</strike>`;
         }
         if (style.has(CODE)) {
           // If our block type is CODE then we are already wrapping the whole
